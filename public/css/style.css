@@ -1,0 +1,129 @@
+:root{
+    --amarillo: #EAC926;
+    --azul:#03264C;
+    --celeste:#1259c3;
+    --giso: #666;
+    --grisc: #ebebeb;
+    --verde:#39b54a;
+}
+*{
+    font-family: 'Krub', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+    box-sizing: border-box;
+    margin: 0%;
+}
+header{
+    background-color: var(--amarillo);
+    width: 100%;
+    font-size: 12px;
+    padding-bottom: 0px;
+}
+footer{
+    text-align: center;
+    font-size: 12px;
+}
+h2{
+    font-size: 24px;
+    margin: 10px;
+}
+main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: var(--grisc);
+    background-size: cover;
+    font-size: 12px;
+}
+ul{
+    visibility: hidden;
+    display: none;
+}
+article{
+    margin: 10px;
+}
+img{
+    width: 100%;
+}
+li{
+    list-style-type: none;
+}
+footer > section > h4{
+    color: var(--giso);
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+footer > section > p{
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+footer > section > i{
+    color: var(--celeste);
+    font-size: 37px;
+}
+.fa-bars{
+    background-color: var(--azul);
+    font-size: 25px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-left:50%;
+    margin-bottom: 17px;
+    color: var(--grisc);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.contenedor{
+    text-align: center;
+}
+.precio{
+    font-size: 18px;
+}
+.descuento{
+    font-size: 16px;
+    color: var(--verde);
+}
+.descripcion{
+    font-size: 16px;
+    display: none;
+    visibility: hidden;
+}
+.fa-truck{
+    color: var(--verde);
+    border: solid 2px var(--verde);
+    padding: 5px;
+    border-radius: 50%;
+}
+.contenedor_descripcion_producto{
+    background-color: white;
+    border-top: solid 1px var(--grisc);
+    padding: 15px;
+}
+.buscador{
+    margin-left: 27%;
+}
+
+
+@media (min-width: 361px){
+    .descripcion{
+        display: block;
+        visibility: visible;
+    }
+    article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    ul{
+        visibility: visible;
+        display: block;
+    }
+    .fa-bars{
+        visibility: hidden;
+        display: none;
+    }
+}
+@media (min-width: 769px){
+    
+}
