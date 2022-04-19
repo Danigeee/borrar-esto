@@ -12,17 +12,23 @@
     
     box-sizing: border-box;
     margin: 0%;
+    padding: 0%;
 }
 header{
     background-color: var(--amarillo);
     width: 100%;
     font-size: 12px;
     padding-bottom: 0px;
+    position: fixed;
+    top: 0;
+    height: 167px;
+    z-index: 2;
 }
 footer{
     text-align: center;
     font-size: 12px;
 }
+
 h2{
     font-size: 24px;
     margin: 10px;
@@ -47,20 +53,123 @@ img{
 }
 li{
     list-style-type: none;
+    display: inline;
+    margin-left: 19px;
 }
-footer > section > h4{
+li a{
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    color: var(--celeste);
+    text-decoration: underline;
+
+}
+footer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+footer > div > section > h4{
     color: var(--giso);
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     margin-top: 5px;
 }
-footer > section > p{
+footer > div > section > p{
     margin-top: 0px;
     margin-left: 50px;
     margin-right: 50px;
 }
-footer > section > i{
+footer > div > section > i{
     color: var(--celeste);
     font-size: 37px;
+}
+footer > div > section:hover > i{
+    color: var(--azul);
+}
+footer  > section > p{
+    text-align: left;
+    margin-top: 8px;
+}
+form{
+    background-color: var(--grisc);
+}
+.form-buscador{
+    background-color: var(--amarillo);
+    display: inline;
+}
+input{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+label input{
+    margin: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.input-buscador{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    display: inline;
+    border-top-left-radius:5px ;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    width: 90%;
+}
+label{
+    margin-left: 10px;
+}
+textarea{
+    margin-left: 10px;
+}
+select{
+    margin-left: 10px;
+
+}
+button{
+    margin-left: 10px;
+}
+.btn-login{
+    background-color: var(--celeste);
+    color: var(--grisc);
+    width: 90%;
+    border-radius: 5%;
+    border: 4px var(--celeste) solid;
+    transition: all 450ms;
+}
+.btn-login:hover{
+    background-color: #0022AA;
+    border: 4px #0022AA solid
+}
+
+.encabezado{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.encabezado__logo{
+    width: 50%;
+    
+}
+.encabezado__buscador {
+    width: 50%;
+    border: none;
+    border-top-left-radius:5px ;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+}
+.encabezado__cuotas{
+    margin-left: auto;
+    margin-right: auto;
+}
+.navegacion{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
 }
 .fa-bars{
     background-color: var(--azul);
@@ -71,59 +180,157 @@ footer > section > i{
     padding: 5px;
     margin-left:50%;
     margin-bottom: 17px;
+    margin-top: 20px;
     color: var(--grisc);
     border-radius: 5px;
     padding-bottom: 10px;
     padding-top: 10px;
 }
-.contenedor{
-    text-align: center;
+.banner{
+    margin-top: 167px;
 }
 .precio{
     font-size: 18px;
+    display: inline;
 }
 .descuento{
     font-size: 16px;
     color: var(--verde);
+    display: inline;
 }
 .descripcion{
     font-size: 16px;
     display: none;
     visibility: hidden;
+    margin-top: 10px;
+    
 }
+
 .fa-truck{
     color: var(--verde);
     border: solid 2px var(--verde);
     padding: 5px;
     border-radius: 50%;
+    right: 33px;
+    margin-top: -8%;
+    position: absolute;
+    top: 9px;  
+    transition: transform 450ms;
+}
+ article:hover .fa-truck{
+    transform: rotatez(270deg);
 }
 .contenedor_descripcion_producto{
     background-color: white;
     border-top: solid 1px var(--grisc);
     padding: 15px;
+    position: relative;
 }
-.buscador{
-    margin-left: 27%;
+.login-section{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+.login-section input {
+    width: 100%;
+    border: none;
+    border-top-left-radius:5px ;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    border: #666 solid 1px;
+}
+.form-login{
+    background-color: white;
+}
 
 @media (min-width: 361px){
-    .descripcion{
-        display: block;
+    header{
+        height: 111px;
+    }
+    .banner{
+        margin-top: 111px;
+    }
+
+    .encabezado__logo{
+        width: 33%;
+        margin-left: 5px;
+        margin-top: 5px;
+        
+    }
+    .encabezado__buscador{
+        width: 30%;
+        margin-left: 0%;
+        margin-left: 7px;
+        
+        
+    }
+    .encabezado__cuotas{
+       
+        width: 33%;
+
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    
+   
+    input{
+        width: 90%;
+    }
+    label input{
+        margin: 0%;
+        margin-left: -43%;
+        margin-right: 0%;
+    }
+  
+    article:hover .descripcion{
         visibility: visible;
+        display: block;
     }
     article{
+        width: 43%;
+    }
+    article:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     ul{
         visibility: visible;
         display: block;
     }
+    li{
+        font-size: 100%;
+    }
     .fa-bars{
         visibility: hidden;
+
+    }
+    .barritas{
         display: none;
     }
 }
 @media (min-width: 769px){
-    
+    header{
+        height: 165px;
+    }
+    .banner{
+        margin-top: 165px;
+    }
+    .encabezado__cuotas{
+        font-size: 17px;
+    }
+    li{
+        font-size: 17px;
+    }
+    .productos{
+        flex-wrap: nowrap;
+    }
+    .footer-flex-container{
+        display: flex;
+    }
 }
