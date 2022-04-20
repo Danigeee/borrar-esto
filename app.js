@@ -8,7 +8,7 @@ app.use(express.static("public"));
 
 
 //levantar el server
-app.listen(3030, () =>{ 
+app.listen( process.env.PORT ||3030, () =>{ 
     console.log("server corriendo puerto 3030");
 })
 
